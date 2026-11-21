@@ -30,19 +30,20 @@
     .art-label{position:absolute;bottom:20px;right:22px;color:var(--muted);font-size:.72rem;letter-spacing:2px}
     section{padding:78px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}
     h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;margin:8px 0}.sub{color:var(--muted);max-width:560px}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:28px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.about-profile{display:flex;align-items:center;gap:20px;margin-bottom:20px}.about-photo{width:132px;height:132px;flex:0 0 132px;object-fit:cover;object-position:center 28%;border-radius:50%;border:3px solid var(--accent);box-shadow:0 0 0 7px #d6ff3818}.panel{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:28px}
     .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.fact{padding:16px;background:#101820;border-radius:9px}.fact b{display:block;color:var(--accent);font-size:1.1rem}
     .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service{background:var(--panel);border:1px solid var(--line);padding:24px;border-radius:12px;min-height:170px}.num{color:var(--accent);font-weight:900}
     .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-    .project-art{height:260px;display:grid;place-items:center;overflow:hidden;background:#121b22}.project-art img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
-    
+    .project-art{height:190px;display:grid;place-items:center;background:linear-gradient(135deg,#263943,#121b22);color:var(--accent);font-size:2rem;font-weight:900;letter-spacing:3px}
+    .project:nth-child(2) .project-art{background:linear-gradient(135deg,#3c2b4c,#171b2b);color:#f3c8ff}
+    .project:nth-child(3) .project-art{background:linear-gradient(135deg,#5b3b25,#1d2021);color:#ffd28a}
     .project-info{padding:18px}.project-info p{color:var(--muted);font-size:.9rem;margin-bottom:0}
     .note{font-size:.83rem;color:var(--muted);margin-top:18px}
     .contact{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}.contact-card{background:var(--accent);color:#101820;padding:30px;border-radius:14px}
     .contact-card a{font-weight:800;text-decoration:underline}.socials{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;color:var(--accent)}
     footer{padding:25px 0;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
     @media(max-width:760px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#101820;padding:20px 5%;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;padding:60px 0;gap:25px}.hero-art{min-height:280px}.about-grid,.contact{grid-template-columns:1fr}.services,.projects{grid-template-columns:1fr 1fr}.section-head{display:block}}
-    @media(max-width:480px){.services,.projects{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}h1{letter-spacing:-2px}}
+    @media(max-width:480px){.services,.projects{grid-template-columns:1fr}.facts{grid-template-columns:1fr 1fr}h1{letter-spacing:-2px}.about-profile{align-items:flex-start;flex-direction:column}.about-photo{width:120px;height:120px;flex-basis:120px}}
   </style>
 </head>
 <body>
@@ -63,7 +64,7 @@
   <section id="about"><div class="wrap">
     <div class="section-head"><div><div class="eyebrow">A little introduction</div><h2>About Me</h2></div></div>
     <div class="about-grid"><div><p class="sub">My name is <strong>Alif Hasan Morsalin</strong>, and I'm building my creative journey in graphic design. I believe good design communicates a message, creates recognition and makes an impression.</p><p class="sub">This website is my portfolio space. I'll keep adding selected projects as my skills and experience grow.</p></div>
-      <div class="panel"><h3>Alif Hasan Morsalin</h3><p class="sub">Graphic Designer & Creative Learner</p><div class="facts"><div class="fact"><b>01</b>Creative thinking</div><div class="fact"><b>02</b>Visual design</div><div class="fact"><b>03</b>Problem solving</div><div class="fact"><b>04</b>Always learning</div></div></div>
+      <div class="panel"><div class="about-profile"><img class="about-photo" src="alif-profile.jpg" alt="Alif Hasan Morsalin profile photo"><div><h3>Alif Hasan Morsalin</h3><p class="sub">Graphic Designer & Creative Learner</p></div></div><div class="facts"><div class="fact"><b>01</b>Creative thinking</div><div class="fact"><b>02</b>Visual design</div><div class="fact"><b>03</b>Problem solving</div><div class="fact"><b>04</b>Always learning</div></div></div>
     </div>
   </div></section>
   <section id="services"><div class="wrap"><div class="section-head"><div><div class="eyebrow">What I create</div><h2>Design Services</h2></div><p class="sub">A selection of design areas to showcase. Update this list to match the services you offer.</p></div>
@@ -73,9 +74,9 @@
   </div></section>
   <section id="portfolio"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Selected work</div><h2>My Portfolio</h2></div><p class="sub">Your real design projects can be added here with images and project descriptions.</p></div>
     <div class="projects">
-      <article class="project"><div class="project-art"><img src="Brand_01.jpg" alt="AHM Brand Identity portfolio project"></div><div class="project-info"><h3>Brand Identity</h3><p>Replace this sample with one of your logo or branding projects.</p></div></article>
-      <article class="project"><div class="project-art"><img src="Poster_02.jpg" alt="AHM Poster Design portfolio project"></div><div class="project-info"><h3>Poster Design</h3><p>Replace this sample with one of your poster designs.</p></div></article>
-      <article class="project"><div class="project-art"><img src="Print_03.jpg" alt="AHM Print Design portfolio project"></div><div class="project-info"><h3>Print Design</h3><p>Replace this sample with a business card, flyer or print project.</p></div></article>
+      <article class="project"><div class="project-art">BRAND / 01</div><div class="project-info"><h3>Brand Identity</h3><p>Replace this sample with one of your logo or branding projects.</p></div></article>
+      <article class="project"><div class="project-art">POSTER / 02</div><div class="project-info"><h3>Poster Design</h3><p>Replace this sample with one of your poster designs.</p></div></article>
+      <article class="project"><div class="project-art">PRINT / 03</div><div class="project-info"><h3>Print Design</h3><p>Replace this sample with a business card, flyer or print project.</p></div></article>
     </div><p class="note">Note: These are editable sample tiles, not claims of completed client projects. Add your own work before sharing the portfolio professionally.</p>
   </div></section>
   <section id="contact"><div class="wrap contact"><div><div class="eyebrow">Let's connect</div><h2>Have an idea?<br>Let's make it visual.</h2><p class="sub">For design inquiries or collaborations, connect with me on Instagram.</p><div class="socials"><a href="https://www.instagram.com/alif_hasan_morsalin/" target="_blank" rel="noopener">Instagram ↗</a></div></div>
